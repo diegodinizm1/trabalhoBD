@@ -1,4 +1,4 @@
-# Arquivo: crud_operations.py
+# Arquivo: cruds.py
 # Objetivo: Conter todas as funções de CRUD (Create, Read, Update, Delete)
 # para interagir com o banco de dados.
 
