@@ -6,11 +6,16 @@ with open("senha.txt") as f:
 def conectar():
     try:
         conexao = psycopg2.connect(
-            host="localhost",
-            database="farmacia",
-            password=senha
+            dbname="farmacia",    
+            user="postgres",         
+            password=senha,        
+            host="localhost",       
+            port="5432" 
         )
+        print("Conexão bem-sucedida ao banco de dados!")
         return conexao
     except Exception as e:
         print(f"Erro ao conectar ao banco de dados: {e}")
         return None
+    
+conectar()
