@@ -1,12 +1,14 @@
 import psycopg2
 
+with open("senha.txt") as f:
+    senha = f.read().strip()
+
 def conectar():
     try:
         conexao = psycopg2.connect(
             host="localhost",
             database="farmacia",
-            user="postgres",
-            password="788606"
+            password=senha
         )
         return conexao
     except Exception as e:
