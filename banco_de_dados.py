@@ -12,7 +12,6 @@ def conectar():
             host="localhost",       
             port="5432" 
         )
-        print("Conexão bem-sucedida ao banco de dados!")
         return conexao
     except Exception as e:
         print(f"Erro ao conectar ao banco de dados: {e}")
